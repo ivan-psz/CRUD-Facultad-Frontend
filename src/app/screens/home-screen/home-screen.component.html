@@ -1,0 +1,42 @@
+<section class="home-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-home">
+                <div class="title">
+                    <span class="title-text">¿Qué quiere agregar?</span>
+                </div>
+                <div class="cards">
+                    <div class="card card-alumno" (click)="goAlumnos">
+                        <div class="card-body">
+                            <h3 class="card-title">Alumnos</h3>
+                            <span class="card-text">Ingresa información como su matrícula,
+                                                    su nombre completo y las materias que toman
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card card-materia" (click)="goMaterias">
+                        <div class="card-body">
+                            <h3 class="card-title">Materias</h3>
+                            <span class="card-text">Ingresa información como su NRC, el nombre de
+                                                    la materia, su horario, el salón, el día y 
+                                                    el profesor que la imparte
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card card-docente" (click)="goDocentes">
+                        <div class="card-body">
+                            <h3 class="card-title">Profesores</h3>
+                            <span class="card-text">Ingresa información como su número de trabajador y
+                                                    su nombre completo
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>
