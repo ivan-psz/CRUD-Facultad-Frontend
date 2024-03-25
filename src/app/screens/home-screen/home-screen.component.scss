@@ -83,14 +83,17 @@
 .card:hover{
     box-shadow: 0px 30px 18px -8px #15202B;
     transform: scale(1.10, 1.10);
+    pointer-events: auto;
 }
 
 .card:hover .card-title{
     background-color: transparent;
     position: relative;
+    pointer-events: auto;
 }
 
 .card:hover .card-text{
     background-color: transparent;
     position: relative;
+    pointer-events: auto;
 }

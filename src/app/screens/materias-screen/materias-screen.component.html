@@ -1,1 +1,45 @@
-<p>materias-screen works!</p>
+<section class="materias-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-materias">
+                <div class="title">
+                    <span class="title-text">¿Qué operación desea realizar?</span>
+                </div>
+                <div class="cards">
+                    <div class="cards-up">
+                        <div class="card card-post" (click)="goPostMateria()">
+                            <div class="card-body">
+                                <h3 class="card-title">Dar de alta</h3>
+                                <span class="card-text">Dé de alta una materia en el sistema</span>
+                            </div>
+                        </div>
+                        <div class="card card-update" (click)="goUpdateMateria()">
+                            <div class="card-body">
+                                <h3 class="card-title">Actualizar</h3>
+                                <span class="card-text">Actualice la información de una materia existente en el sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-down">
+                        <div class="card card-delete" (click)="goDeleteMateria()">
+                            <div class="card-body">
+                                <h3 class="card-title">Dar de baja</h3>
+                                <span class="card-text">Dé de baja una materia existente en el sistema</span>
+                            </div>
+                        </div>
+                        <div class="card card-get" (click)="goGetMateria()">
+                            <div class="card-body">
+                                <h3 class="card-title">Ver</h3>
+                                <span class="card-text">Liste a las materias que existen en el sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

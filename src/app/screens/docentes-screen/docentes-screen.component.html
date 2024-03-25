@@ -1,1 +1,45 @@
-<p>docentes-screen works!</p>
+<section class="docentes-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-docentes">
+                <div class="title">
+                    <span class="title-text">¿Qué operación desea realizar?</span>
+                </div>
+                <div class="cards">
+                    <div class="cards-up">
+                        <div class="card card-post" (click)="goPostDocente()">
+                            <div class="card-body">
+                                <h3 class="card-title">Dar de alta</h3>
+                                <span class="card-text">Dé de alta a un docente en el sistema</span>
+                            </div>
+                        </div>
+                        <div class="card card-update" (click)="goUpdateDocente()">
+                            <div class="card-body">
+                                <h3 class="card-title">Actualizar</h3>
+                                <span class="card-text">Actualice la información de un docente existente en el sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-down">
+                        <div class="card card-delete" (click)="goDeleteDocente()">
+                            <div class="card-body">
+                                <h3 class="card-title">Dar de baja</h3>
+                                <span class="card-text">Dé de baja a un docente existente en el sistema</span>
+                            </div>
+                        </div>
+                        <div class="card card-get" (click)="goGetDocente()">
+                            <div class="card-body">
+                                <h3 class="card-title">Ver</h3>
+                                <span class="card-text">Liste a los docentes que existen en el sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>
