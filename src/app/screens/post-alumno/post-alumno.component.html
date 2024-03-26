@@ -1,0 +1,42 @@
+<section class="post-alumno-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-post-alumno">
+                <div class="card formulario">
+                    <h3 class="card-title">Dar de alta</h3>
+                    <div class="inputs">
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Matrícula</mat-label>
+                            <input matInput [(ngModel)]="alumno.matricula" name="id" placeholder="Escriba la matrícula del alumno">
+                            <div *ngIf="errors.matricula" class="invalid-feedback">{{ errors.matricula }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput [(ngModel)]="alumno.nombre" name="id" placeholder="Escriba el nombre del alumno">
+                            <div *ngIf="errors.nombre" class="invalid-feedback">{{ errors.nombre }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Apellido paterno</mat-label>
+                            <input matInput [(ngModel)]="alumno.ap_paterno" name="id" placeholder="Escriba el apellido paterno del alumno">
+                            <div *ngIf="errors.ap_paterno" class="invalid-feedback">{{ errors.ap_paterno }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Apellido materno</mat-label>
+                            <input matInput [(ngModel)]="alumno.ap_materno" name="id" placeholder="Escriba el apellido materno del alumno">
+                            <div *ngIf="errors.ap_materno" class="invalid-feedback">{{ errors.ap_materno }}</div>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="botones">
+                        <button class="btn-registrar" type="button" (click)="registrar()" >Registrar</button>
+                        <button class="btn-cancelar" type="submit" (click)="regresar()" >Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>
