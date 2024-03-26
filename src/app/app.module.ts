@@ -24,6 +24,7 @@ import { LeftsideBarComponent } from './partials/leftside-bar/leftside-bar.compo
 import { AlumnosScreenComponent } from './screens/alumnos-screen/alumnos-screen.component';
 import { MateriasScreenComponent } from './screens/materias-screen/materias-screen.component';
 import { DocentesScreenComponent } from './screens/docentes-screen/docentes-screen.component';
+import { PostAlumno2Component } from './screens/post-alumno-2/post-alumno-2.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DocentesScreenComponent } from './screens/docentes-screen/docentes-scre
     LeftsideBarComponent,
     AlumnosScreenComponent,
     MateriasScreenComponent,
-    DocentesScreenComponent
+    DocentesScreenComponent,
+    PostAlumno2Component
   ],
   imports: [
     BrowserModule,

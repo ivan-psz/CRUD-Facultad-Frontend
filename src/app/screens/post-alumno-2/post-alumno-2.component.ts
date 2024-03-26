@@ -5,12 +5,11 @@ import { AlumnosService } from '../../services/alumnos.service';
 declare var $ :any; //JQuery
 
 @Component({
-  selector: 'app-post-alumno',
-  templateUrl: './post-alumno.component.html',
-  styleUrl: './post-alumno.component.scss'
+  selector: 'app-post-alumno-2',
+  templateUrl: './post-alumno-2.component.html',
+  styleUrl: './post-alumno-2.component.scss'
 })
-
-export class PostAlumnoComponent implements OnInit {
+export class PostAlumno2Component implements OnInit{
 
   public alumno: any = {};
   //detectar errores
@@ -58,7 +57,7 @@ export class PostAlumnoComponent implements OnInit {
 
   public regresar()
   {
-    this.router.navigate([""]);
+    this.router.navigate(["alumnos"]);
   }
 
 }
