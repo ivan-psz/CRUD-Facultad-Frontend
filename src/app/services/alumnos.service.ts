@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ValidatorService } from './tools/validator.service';
-import { ErrorsService } from './tools/errors.service';
+import { ErrorsService } from './tools/errors.service'; 
 
 @Injectable({
   providedIn: 'root'
