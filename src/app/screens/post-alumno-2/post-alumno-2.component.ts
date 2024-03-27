@@ -51,6 +51,17 @@ export class PostAlumno2Component implements OnInit{
       return false;
     }
 
+    this.service.registrarAlumno(this.alumno).subscribe(
+      (response)=>{
+        alert("Alumno registrado correctamente");
+        console.log("Usuario registrado: ", response);
+        this.router.navigate(['']);
+      }, (error)=>{
+        alert("Hubo un error al registrar al alumno");
+        console.log(error);
+      }
+    );
+
     return true;
 
   }
