@@ -1,0 +1,27 @@
+<section class="list-alumnos-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-list-alumnos">
+                <div class="cards" *ngIf="lista_alumnos.length>0; else lista_vacia">
+                    <div class="student-card" *ngFor="let alumno of lista_alumnos">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">{{alumno.matricula}}</h3>
+                                <span class="card-text">{{alumno.nombre}} {{alumno.ap_paterno}} {{alumno.ap_materno}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ng-template #lista_vacia>
+                    <div class="body-lista-vacia">
+                        <p class="txt-lista-vacia">Parece ser que no hay alumnos registrados ):</p>
+                    </div>
+                </ng-template>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

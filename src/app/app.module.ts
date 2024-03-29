@@ -27,6 +27,7 @@ import { AlumnosScreenComponent } from './screens/alumnos-screen/alumnos-screen.
 import { MateriasScreenComponent } from './screens/materias-screen/materias-screen.component';
 import { DocentesScreenComponent } from './screens/docentes-screen/docentes-screen.component';
 import { PostAlumno2Component } from './screens/post-alumno-2/post-alumno-2.component';
+import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-alumnos-screen.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PostAlumno2Component } from './screens/post-alumno-2/post-alumno-2.comp
     AlumnosScreenComponent,
     MateriasScreenComponent,
     DocentesScreenComponent,
-    PostAlumno2Component
+    PostAlumno2Component,
+    ListAlumnosScreenComponent
   ],
   imports: [
     BrowserModule,

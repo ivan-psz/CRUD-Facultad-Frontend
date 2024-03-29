@@ -77,8 +77,12 @@ export class AlumnosService {
     return errors;
   }
 
-  public registrarAlumno(data: any): Observable <any>{
+  public registrarAlumno(data: any): Observable<any>{
     return this.http.post<any>(`${environment.url_api}/alumnos/`,data, httpOptions);
+  }
+
+  public obtenerListaAlumnos(): Observable<any>{
+    return this.http.get<any>(`${environment.url_api}/list-alumnos/`, httpOptions);
   }
 
 }
