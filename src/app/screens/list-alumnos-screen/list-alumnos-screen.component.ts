@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlumnosService } from '../../services/alumnos.service';
 
@@ -16,7 +16,7 @@ export class ListAlumnosScreenComponent implements OnInit {
 
   constructor(
     private service: AlumnosService,
-    router: Router
+    private router: Router
   ){ }
 
   ngOnInit(): void {
@@ -30,6 +30,10 @@ export class ListAlumnosScreenComponent implements OnInit {
         console.log("Lista alumnos: ", this.lista_alumnos);
       }
     )
+  }
+
+  public goAlumno(matricula: number){
+    this.router.navigate(['alumno/'+matricula]);
   }
 
 }

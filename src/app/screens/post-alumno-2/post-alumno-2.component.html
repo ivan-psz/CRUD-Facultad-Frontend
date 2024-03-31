@@ -7,11 +7,12 @@
             <app-header-app (drawer)="drawer.toggle()"></app-header-app>
             <div class="body-post-alumno">
                 <div class="card formulario">
-                    <h3 class="card-title">Dar de alta</h3>
+                    <h3 class="card-title" *ngIf="!editar">Dar de alta</h3>
+                    <h3 class="card-title" *ngIf="editar">Editar usuario</h3>
                     <div class="inputs">
                         <mat-form-field class="mat-input" appearance="outline">
                             <mat-label>Matrícula</mat-label>
-                            <input matInput [(ngModel)]="alumno.matricula" name="id" placeholder="Escriba la matrícula del alumno">
+                            <input matInput [(ngModel)]="alumno.matricula" name="id" mask='000000000' placeholder="Escriba la matrícula del alumno" [disabled]="editar">
                             <div *ngIf="errors.matricula" class="invalid-feedback">{{ errors.matricula }}</div>
                         </mat-form-field>
                         <mat-form-field class="mat-input" appearance="outline">
@@ -32,7 +33,8 @@
                     </div>
 
                     <div class="botones">
-                        <button class="btn-registrar" type="button" (click)="registrar()" >Registrar</button>
+                        <button *ngIf="!editar" class="btn btn-registrar" type="submit" (click)="registrar()">Registrar</button>
+                        <button *ngIf="editar" class="btn btn-registrar" type="submit" (click)="actualizar()">Actualizar</button>
                         <button class="btn-cancelar" type="submit" (click)="regresar()" >Cancelar</button>
                     </div>
                 </div>

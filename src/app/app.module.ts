@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -28,6 +30,7 @@ import { MateriasScreenComponent } from './screens/materias-screen/materias-scre
 import { DocentesScreenComponent } from './screens/docentes-screen/docentes-screen.component';
 import { PostAlumno2Component } from './screens/post-alumno-2/post-alumno-2.component';
 import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-alumnos-screen.component';
+import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-screen.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-a
     MateriasScreenComponent,
     DocentesScreenComponent,
     PostAlumno2Component,
-    ListAlumnosScreenComponent
+    ListAlumnosScreenComponent,
+    PAlumnoScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +61,14 @@ import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-a
     MatSidenavModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideNgxMask()
   ],
   bootstrap: [AppComponent]
 })

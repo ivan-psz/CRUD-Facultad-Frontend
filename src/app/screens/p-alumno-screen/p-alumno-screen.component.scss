@@ -1,0 +1,111 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #192734;
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #192734;
+}
+
+.icon-back{
+    //padding-left: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon-back{
+    color: #FFFFFF;
+    font-size: 24pt;
+}
+
+.buttons{
+    width: auto;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.editar{
+    color: #FFFFFF!important;
+    background-color: #192734!important;
+    border: 2px solid #15202B!important;
+    font-family: Nexa;
+    cursor: auto;
+}
+
+.eliminar{
+    background-color: #E84150;
+    font-family: Nexa;
+}
+
+.eliminar:hover{
+    background-color: #ce1626;
+}
+
+.body{
+    width: 100%;
+    height: 90vh;
+    background-color: #192734;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.txt-nombre{
+    text-align: center;
+    font-family: Nexa-Bold;
+    font-size: 36px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.txt-matricula{
+    margin-top: 1rem;
+    text-align: center;
+    font-family: Nexa;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.clases{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.txt-clases{
+    text-align: center;
+    font-family: Nexa;
+    font-size: 24px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}

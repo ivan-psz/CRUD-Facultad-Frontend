@@ -85,4 +85,12 @@ export class AlumnosService {
     return this.http.get<any>(`${environment.url_api}/list-alumnos/`, httpOptions);
   }
 
+  public obtenerAlumnoByMatricula(matriculaAlumno: Number){
+    return this.http.get<any>(`${environment.url_api}/alumnos/?matricula=${matriculaAlumno}`, httpOptions);
+  }
+
+  public editarAlumno (data: any): Observable <any>{
+    return this.http.put<any>(`${environment.url_api}/alumnos-edit/`, data);
+  }
+
 }

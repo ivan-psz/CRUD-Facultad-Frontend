@@ -21,14 +21,6 @@ export class AlumnosScreenComponent implements OnInit {
     this.router.navigate(['post-alumno']);
   }
 
-  public goUpdateAlumno(){
-    this.router.navigate(['update-alumno']);
-  }
-
-  public goDeleteAlumno(){
-    this.router.navigate(['delete-alumno']);
-  }
-
   public goListAlumno(){
     this.router.navigate(['list-alumnos']);
   }
