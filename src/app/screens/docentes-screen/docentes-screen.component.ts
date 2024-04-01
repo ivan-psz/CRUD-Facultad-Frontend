@@ -22,16 +22,8 @@ export class DocentesScreenComponent implements OnInit {
     this.router.navigate(['post-docente']);
   }
 
-  public goUpdateDocente(){
-    this.router.navigate(['update-docente']);
-  }
-
-  public goDeleteDocente(){
-    this.router.navigate(['delete-docente']);
-  }
-
-  public goGetDocente(){
-    this.router.navigate(['view-docentes']);
+  public goListDocente(){
+    this.router.navigate(['list-docentes']);
   }
 
 }

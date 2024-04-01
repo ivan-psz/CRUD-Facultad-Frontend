@@ -12,8 +12,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
-export class AlumnosService {
+export class DocentesService {
 
   constructor(
     private http: HttpClient,
@@ -21,30 +20,30 @@ export class AlumnosService {
     private errorService: ErrorsService,
   ) { }
 
-  public esquemaAlumno()
+  public esquemaDocente()
   {
     return{
-      'matricula': '',
+      'num_trabajador': '',
       'nombre': '',
       'ap_paterno': '',
       'ap_materno': ''
     }
   }
 
-  public validarAlumno(data: any){
-    console.log("Validando usuario...", data);
+  public validarDocente(data: any){
+    console.log("Validando docente...", data);
     let errors: any = [];
 
-    if (!this.validatorService.required(data["matricula"]))
+    if (!this.validatorService.required(data["num_trabajador"]))
     {
-      errors["matricula"] = this.errorService.required;  
-    } else if(!this.validatorService.min(data["matricula"], 9)){
-      errors["matricula"] = this.errorService.min(9);
-    } else if(!this.validatorService.max(data["matricula"], 9)){
-      errors["matricula"] = this.errorService.max(9);
-    } else if (!this.validatorService.numeric(data["matricula"])) 
+      errors["num_trabajador"] = this.errorService.required;  
+    } else if(!this.validatorService.min(data["num_trabajador"], 5)){
+      errors["num_trabajador"] = this.errorService.min(5);
+    } else if(!this.validatorService.max(data["num_trabajador"], 5)){
+      errors["num_trabajador"] = this.errorService.max(5);
+    } else if (!this.validatorService.numeric(data["num_trabajador"])) 
     {
-      alert("La matrícula es un valor numérico");
+      alert("El número de trabajador es un valor numérico");
     }
 
     if (!this.validatorService.required(data["nombre"]))
@@ -77,7 +76,7 @@ export class AlumnosService {
     return errors;
   }
 
-  public registrarAlumno(data: any): Observable<any>{
+  /*public registrarAlumno(data: any): Observable<any>{
     return this.http.post<any>(`${environment.url_api}/alumnos/`,data, httpOptions);
   }
 
@@ -95,6 +94,7 @@ export class AlumnosService {
 
   public eliminarAlumno(matricula: Number): Observable <any>{
     return this.http.delete<any>(`${environment.url_api}/alumnos-edit/?matricula=${matricula}`);
-  }
+  }*/
+
 
 }

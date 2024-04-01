@@ -20,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { HeaderAppComponent } from './partials/header-app/header-app.component';
@@ -31,6 +32,10 @@ import { DocentesScreenComponent } from './screens/docentes-screen/docentes-scre
 import { PostAlumno2Component } from './screens/post-alumno-2/post-alumno-2.component';
 import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-alumnos-screen.component';
 import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-screen.component';
+import { DeleteAlumnoModalComponent } from './modals/delete-alumno-modal/delete-alumno-modal.component';
+import { EditarAlumnoModalComponent } from './modals/editar-alumno-modal/editar-alumno-modal.component';
+import { PostDocenteComponent } from './screens/post-docente/post-docente.component';
+import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,11 @@ import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-scree
     DocentesScreenComponent,
     PostAlumno2Component,
     ListAlumnosScreenComponent,
-    PAlumnoScreenComponent
+    PAlumnoScreenComponent,
+    DeleteAlumnoModalComponent,
+    EditarAlumnoModalComponent,
+    PostDocenteComponent,
+    ListDocentesScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +72,8 @@ import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-scree
     ReactiveFormsModule,
     HttpClientModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration(),

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlumnosService } from '../../services/alumnos.service';
 import { Location } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { EditarAlumnoModalComponent } from '../../modals/editar-alumno-modal/editar-alumno-modal.component';
 
 declare var $ :any; //JQuery
 
@@ -25,7 +27,8 @@ export class PostAlumno2Component implements OnInit{
     private router: Router,
     private service: AlumnosService,
     public activatedRoute: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    public dialog: MatDialog
   ){ }
 
   ngOnInit(): void {
@@ -103,15 +106,20 @@ export class PostAlumno2Component implements OnInit{
     }
     console.log("Pasó la validación");
     
-    this.service.editarAlumno(this.alumno).subscribe(
-      (response)=>{
-        alert("Alumno editado correctamente");
-       console.log("Alumno editado: ", response);
-       this.router.navigate(["/"]);
-      }, (error)=>{
-        alert("No se pudo editar al alumno");
+    const dialogRef = this.dialog.open(EditarAlumnoModalComponent,{
+      data: this.alumno,
+      height: '238px',
+      width: '328px'
+    });
+
+    dialogRef.afterClosed().subscribe(result=>{
+      if(result.isDelete){
+        console.log("Alumno editado");
+        this.location.back();
+      }else{
+        console.log("No se editó al alumno");
       }
-    );
+    })
 
     return true;
   }

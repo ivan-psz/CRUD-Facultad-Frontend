@@ -1,0 +1,44 @@
+<section class="post-docente-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-post-docente">
+                <div class="card formulario">
+                    <h3 class="card-title" *ngIf="!editar">Dar de alta</h3>
+                    <h3 class="card-title" *ngIf="editar">Editar usuario</h3>
+                    <div class="inputs">
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Número de trabajador</mat-label>
+                            <input matInput [(ngModel)]="docente.num_trabajador" name="id" mask='00000' placeholder="Escriba el número de trabajador del docente" [disabled]="editar">
+                            <div *ngIf="errors.num_trabajador" class="invalid-feedback">{{ errors.matricula }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput [(ngModel)]="docente.nombre" name="id" placeholder="Escriba el nombre del docente">
+                            <div *ngIf="errors.nombre" class="invalid-feedback">{{ errors.nombre }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Apellido paterno</mat-label>
+                            <input matInput [(ngModel)]="docente.ap_paterno" name="id" placeholder="Escriba el apellido paterno del docente">
+                            <div *ngIf="errors.ap_paterno" class="invalid-feedback">{{ errors.ap_paterno }}</div>
+                        </mat-form-field>
+                        <mat-form-field class="mat-input" appearance="outline">
+                            <mat-label>Apellido materno</mat-label>
+                            <input matInput [(ngModel)]="docente.ap_materno" name="id" placeholder="Escriba el apellido materno del docente">
+                            <div *ngIf="errors.ap_materno" class="invalid-feedback">{{ errors.ap_materno }}</div>
+                        </mat-form-field>
+                    </div>
+
+                <!--    <div class="botones">
+                        <button *ngIf="!editar" class="btn btn-registrar" type="submit" (click)="registrar()">Registrar</button>
+                        <button *ngIf="editar" class="btn btn-registrar" type="submit" (click)="actualizar()">Actualizar</button>
+                        <button class="btn-cancelar" type="submit" (click)="regresar()" >Cancelar</button>
+                    </div> -->
+                </div>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>
