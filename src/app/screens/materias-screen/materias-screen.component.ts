@@ -21,16 +21,8 @@ export class MateriasScreenComponent implements OnInit {
     this.router.navigate(['post-materia']);
   }
 
-  public goUpdateMateria(){
-    this.router.navigate(['update-materia']);
-  }
-
-  public goDeleteMateria(){
-    this.router.navigate(['delete-materia']);
-  }
-
-  public goGetMateria(){
-    this.router.navigate(['view-materias']);
+  public goListMateria(){
+    this.router.navigate(['list-materias']);
   }
 
 }

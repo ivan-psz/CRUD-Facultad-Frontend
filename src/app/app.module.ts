@@ -36,6 +36,9 @@ import { DeleteAlumnoModalComponent } from './modals/delete-alumno-modal/delete-
 import { EditarAlumnoModalComponent } from './modals/editar-alumno-modal/editar-alumno-modal.component';
 import { PostDocenteComponent } from './screens/post-docente/post-docente.component';
 import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
+import { PDocenteScreenComponent } from './screens/p-docente-screen/p-docente-screen.component';
+import { DeleteDocenteModalComponent } from './modals/delete-docente-modal/delete-docente-modal.component';
+import { EditarDocenteModalComponent } from './modals/editar-docente-modal/editar-docente-modal.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list
     DeleteAlumnoModalComponent,
     EditarAlumnoModalComponent,
     PostDocenteComponent,
-    ListDocentesScreenComponent
+    ListDocentesScreenComponent,
+    PDocenteScreenComponent,
+    DeleteDocenteModalComponent,
+    EditarDocenteModalComponent
   ],
   imports: [
     BrowserModule,

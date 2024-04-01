@@ -1,0 +1,19 @@
+<section class="p-docente-screen">
+    <div class="wrapper">
+        <div class="header">
+            <div class="icon-back" (click)="regresar()">
+                <mat-icon class="icon-back">arrow_back</mat-icon>
+            </div>
+            <div class="buttons">
+                <button class="editar" mat-flat-button (click)="editarDocente()">Editar</button>
+                <button class="eliminar" mat-flat-button color="warn" (click)="eliminar(docente.num_trabajador)">Eliminar</button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="nombre">
+                <h1 class="txt-nombre">{{docente.nombre}} {{docente.ap_paterno}} {{docente.ap_materno}}</h1>
+                <h2 class="txt-num-trabajador">{{docente.num_trabajador}}</h2>
+            </div>
+        </div>
+    </div>
+</section>

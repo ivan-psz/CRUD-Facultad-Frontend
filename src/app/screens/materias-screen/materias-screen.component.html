@@ -10,32 +10,16 @@
                     <span class="title-text">¿Qué operación desea realizar?</span>
                 </div>
                 <div class="cards">
-                    <div class="cards-up">
-                        <div class="card card-post" (click)="goPostMateria()">
-                            <div class="card-body">
-                                <h3 class="card-title">Dar de alta</h3>
-                                <span class="card-text">Dé de alta una materia en el sistema</span>
-                            </div>
-                        </div>
-                        <div class="card card-update" (click)="goUpdateMateria()">
-                            <div class="card-body">
-                                <h3 class="card-title">Actualizar</h3>
-                                <span class="card-text">Actualice la información de una materia existente en el sistema</span>
-                            </div>
+                    <div class="card card-post" (click)="goPostMateria()">
+                        <div class="card-body">
+                            <h3 class="card-title">Crear</h3>
+                            <span class="card-text">Cree una materia en el sistema</span>
                         </div>
                     </div>
-                    <div class="cards-down">
-                        <div class="card card-delete" (click)="goDeleteMateria()">
-                            <div class="card-body">
-                                <h3 class="card-title">Dar de baja</h3>
-                                <span class="card-text">Dé de baja una materia existente en el sistema</span>
-                            </div>
-                        </div>
-                        <div class="card card-get" (click)="goGetMateria()">
-                            <div class="card-body">
-                                <h3 class="card-title">Ver</h3>
-                                <span class="card-text">Liste a las materias que existen en el sistema</span>
-                            </div>
+                    <div class="card card-get" (click)="goListMateria()">
+                        <div class="card-body">
+                            <h3 class="card-title">Ver</h3>
+                            <span class="card-text">Liste a las materias que han sido creadas</span>
                         </div>
                     </div>
                 </div>

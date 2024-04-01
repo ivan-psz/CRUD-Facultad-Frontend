@@ -1,1 +1,29 @@
-<p>list-docentes-screen works!</p>
+<section class="list-docentes-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-list-docentes">
+                <div class="cards" *ngIf="lista_docentes.length>0; else lista_vacia">
+                    <div class="card-container">
+                        <div class="card" *ngFor="let docente of lista_docentes" (click)="goDocente(docente.num_trabajador)">
+                          <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-header">{{ docente.num_trabajador }}</span>
+                          </div>
+                          <div class="card-body">
+                            <span class="text-body">{{ docente.nombre }} {{ docente.ap_paterno }} {{ docente.ap_materno }}</span>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <ng-template #lista_vacia>
+                    <div class="body-lista-vacia">
+                        <p class="txt-lista-vacia">Parece ser que no hay docentes registrados ):</p>
+                    </div>
+                </ng-template>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

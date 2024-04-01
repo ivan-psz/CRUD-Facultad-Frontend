@@ -9,6 +9,7 @@ import { ListAlumnosScreenComponent } from './screens/list-alumnos-screen/list-a
 import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-screen.component';
 import { PostDocenteComponent } from './screens/post-docente/post-docente.component';
 import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
+import { PDocenteScreenComponent } from './screens/p-docente-screen/p-docente-screen.component';
 
 const routes: Routes = [
   {path: '', component: HomeScreenComponent, pathMatch: 'full'},
@@ -20,7 +21,9 @@ const routes: Routes = [
   {path: 'list-alumnos', component: ListAlumnosScreenComponent, pathMatch: 'full'},
   {path: 'alumno/:matricula', component: PAlumnoScreenComponent, pathMatch: 'full'},
   {path: 'post-docente', component: PostDocenteComponent, pathMatch: 'full'},
+  {path: 'post-docente/:num_trabajador', component: PostDocenteComponent, pathMatch: 'full'},
   {path: 'list-docentes', component: ListDocentesScreenComponent, pathMatch: 'full'},
+  {path: 'docente/:num_trabajador', component: PDocenteScreenComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

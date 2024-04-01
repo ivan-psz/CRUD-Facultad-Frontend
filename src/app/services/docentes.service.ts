@@ -76,25 +76,25 @@ export class DocentesService {
     return errors;
   }
 
-  /*public registrarAlumno(data: any): Observable<any>{
-    return this.http.post<any>(`${environment.url_api}/alumnos/`,data, httpOptions);
+  public registrarDocente(data: any): Observable<any>{
+    return this.http.post<any>(`${environment.url_api}/docentes/`,data, httpOptions);
   }
 
-  public obtenerListaAlumnos(): Observable<any>{
-    return this.http.get<any>(`${environment.url_api}/list-alumnos/`, httpOptions);
+  public obtenerListaDocentes(): Observable<any>{
+    return this.http.get<any>(`${environment.url_api}/list-docentes/`, httpOptions);
   }
 
-  public obtenerAlumnoByMatricula(matriculaAlumno: Number){
-    return this.http.get<any>(`${environment.url_api}/alumnos/?matricula=${matriculaAlumno}`, httpOptions);
+  public obtenerDocenteByNumTrabajador(numeroTrabajador: Number){
+    return this.http.get<any>(`${environment.url_api}/docentes/?num_trabajador=${numeroTrabajador}`, httpOptions);
   }
 
-  public editarAlumno (data: any): Observable <any>{
-    return this.http.put<any>(`${environment.url_api}/alumnos-edit/`, data);
+  public editarDocente (data: any): Observable <any>{
+    return this.http.put<any>(`${environment.url_api}/docentes-edit/`, data);
   }
 
-  public eliminarAlumno(matricula: Number): Observable <any>{
-    return this.http.delete<any>(`${environment.url_api}/alumnos-edit/?matricula=${matricula}`);
-  }*/
+  public eliminarDocente(numeroTrabajador: Number): Observable <any>{
+    return this.http.delete<any>(`${environment.url_api}/docentes-edit/?num_trabajador=${numeroTrabajador}`);
+  }
 
 
 }

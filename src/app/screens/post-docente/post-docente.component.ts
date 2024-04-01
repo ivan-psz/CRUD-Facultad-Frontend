@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DocentesService } from '../../services/docentes.service';
-//FALTA AGREGAR EL MODAL
+import { EditarDocenteModalComponent } from '../../modals/editar-docente-modal/editar-docente-modal.component';
 
 declare var $ :any; //JQuery
 
@@ -29,7 +29,7 @@ export class PostDocenteComponent /*implements OnInit*/ {
     public dialog: MatDialog
   ){ }
 
-  /*ngOnInit(): void {
+  ngOnInit(): void {
       this.docente = this.service.esquemaDocente();
 
       if(this.activatedRoute.snapshot.params['num_trabajador'] != undefined){
@@ -43,7 +43,7 @@ export class PostDocenteComponent /*implements OnInit*/ {
   }
 
   public obtenerDocenteByMatricula(){
-    this.service.obtenerDocenteByMatricula(this.numeroDocente).subscribe(
+    this.service.obtenerDocenteByNumTrabajador(this.numeroDocente).subscribe(
       (response)=>{
         this.docente = response;
         console.log("Datos del docente: ", this.docente);
@@ -105,7 +105,7 @@ export class PostDocenteComponent /*implements OnInit*/ {
     }
     console.log("Pasó la validación");
     
-    const dialogRef = this.dialog.open(EditarAlumnoModalComponent,{
+    const dialogRef = this.dialog.open(EditarDocenteModalComponent,{
       data: this.docente,
       height: '238px',
       width: '328px'
@@ -121,6 +121,6 @@ export class PostDocenteComponent /*implements OnInit*/ {
     })
 
     return true;
-  }*/
+  }
 
 }
