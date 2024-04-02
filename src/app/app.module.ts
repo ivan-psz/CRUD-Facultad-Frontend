@@ -20,7 +20,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { HeaderAppComponent } from './partials/header-app/header-app.component';
@@ -39,6 +40,7 @@ import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list
 import { PDocenteScreenComponent } from './screens/p-docente-screen/p-docente-screen.component';
 import { DeleteDocenteModalComponent } from './modals/delete-docente-modal/delete-docente-modal.component';
 import { EditarDocenteModalComponent } from './modals/editar-docente-modal/editar-docente-modal.component';
+import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-materia-screen.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { EditarDocenteModalComponent } from './modals/editar-docente-modal/edita
     ListDocentesScreenComponent,
     PDocenteScreenComponent,
     DeleteDocenteModalComponent,
-    EditarDocenteModalComponent
+    EditarDocenteModalComponent,
+    PostMateriaScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ import { EditarDocenteModalComponent } from './modals/editar-docente-modal/edita
     HttpClientModule,
     NgxMaskDirective,
     NgxMaskPipe,
-    MatDialogModule
+    MatDialogModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [
     provideClientHydration(),

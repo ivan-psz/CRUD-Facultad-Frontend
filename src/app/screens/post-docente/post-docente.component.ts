@@ -12,7 +12,7 @@ declare var $ :any; //JQuery
   templateUrl: './post-docente.component.html',
   styleUrl: './post-docente.component.scss'
 })
-export class PostDocenteComponent /*implements OnInit*/ {
+export class PostDocenteComponent implements OnInit {
 
   public numeroDocente: Number = 0;
   public docente: any = {};

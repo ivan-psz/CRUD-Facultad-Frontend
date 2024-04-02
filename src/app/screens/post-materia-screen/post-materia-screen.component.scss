@@ -1,0 +1,107 @@
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #192734;
+}
+
+.body-post-materia{
+    width: 100%;
+    height: 90vh;
+    background-color: #192734;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.card{
+    width: 500px;
+    height: 750px;
+    background-color: #192734;
+    border: 3px solid #15202B;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title{
+    text-align: left;
+    font-family: Nexa-Bold;
+    font-size: 28px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+}
+
+.mat-input{
+    width: 100%!important;
+    text-align: left!important;
+    opacity: 1;
+    font-family: Nexa;
+    border-color: #15202B;
+    color: #FFFFFF;
+}
+
+.mat-select{
+    width: 100%!important;
+    text-align: left!important;
+    opacity: 1;
+    font-family: Nexa;
+    border-color: #15202B;
+    color: #FFFFFF;
+}
+
+.botones
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 2rem;
+}
+
+.btn-registrar
+{
+    width: 8rem;
+    cursor: pointer;
+    opacity: 1;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: Nexa-Bold;
+    background-color: #192734;
+    border: 2px solid #15202B;
+    padding: 10px 10px;
+    border-radius: 2px; 
+    //margin-right: 150px;
+}
+
+.btn-cancelar
+{
+    width: 8rem;
+    cursor: pointer;
+    opacity: 1;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: Nexa-Bold;
+    background-color: rgba(255, 15, 15, 0.651);
+    padding: 10px 10px;
+    border-radius: 2px; 
+    //margin-left: 150px;
+}

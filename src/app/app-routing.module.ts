@@ -10,20 +10,22 @@ import { PAlumnoScreenComponent } from './screens/p-alumno-screen/p-alumno-scree
 import { PostDocenteComponent } from './screens/post-docente/post-docente.component';
 import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
 import { PDocenteScreenComponent } from './screens/p-docente-screen/p-docente-screen.component';
+import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-materia-screen.component';
 
 const routes: Routes = [
   {path: '', component: HomeScreenComponent, pathMatch: 'full'},
   {path: 'alumnos', component: AlumnosScreenComponent, pathMatch: 'full'},
-  {path: 'materias', component: MateriasScreenComponent, pathMatch: 'full'},
-  {path: 'docentes', component: DocentesScreenComponent, pathMatch: 'full'},
   {path: 'post-alumno', component: PostAlumno2Component, pathMatch: 'full'},
   {path: 'post-alumno/:matricula', component: PostAlumno2Component, pathMatch: 'full'},
   {path: 'list-alumnos', component: ListAlumnosScreenComponent, pathMatch: 'full'},
   {path: 'alumno/:matricula', component: PAlumnoScreenComponent, pathMatch: 'full'},
+  {path: 'docentes', component: DocentesScreenComponent, pathMatch: 'full'},
   {path: 'post-docente', component: PostDocenteComponent, pathMatch: 'full'},
   {path: 'post-docente/:num_trabajador', component: PostDocenteComponent, pathMatch: 'full'},
   {path: 'list-docentes', component: ListDocentesScreenComponent, pathMatch: 'full'},
   {path: 'docente/:num_trabajador', component: PDocenteScreenComponent, pathMatch: 'full'},
+  {path: 'materias', component: MateriasScreenComponent, pathMatch: 'full'},
+  {path: 'post-materia', component: PostMateriaScreenComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

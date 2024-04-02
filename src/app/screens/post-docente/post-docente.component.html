@@ -13,7 +13,7 @@
                         <mat-form-field class="mat-input" appearance="outline">
                             <mat-label>Número de trabajador</mat-label>
                             <input matInput [(ngModel)]="docente.num_trabajador" name="id" mask='00000' placeholder="Escriba el número de trabajador del docente" [disabled]="editar">
-                            <div *ngIf="errors.num_trabajador" class="invalid-feedback">{{ errors.matricula }}</div>
+                            <div *ngIf="errors.num_trabajador" class="invalid-feedback">{{ errors.num_trabajador }}</div>
                         </mat-form-field>
                         <mat-form-field class="mat-input" appearance="outline">
                             <mat-label>Nombre</mat-label>
