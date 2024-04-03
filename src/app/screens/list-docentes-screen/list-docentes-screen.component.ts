@@ -18,6 +18,7 @@ export class ListDocentesScreenComponent implements OnInit {
   public numTrabajador: Number = 0;
   public docente: any = {};
   public lista_docentes: any[] = [];
+  public lista_vacia: boolean = false;
 
   constructor(
     private service: DocentesService,
@@ -53,6 +54,9 @@ export class ListDocentesScreenComponent implements OnInit {
       (response)=>{
         this.lista_docentes = response;
         console.log("Lista docentes: ", this.lista_docentes);
+        if(this.lista_docentes.length < 1){
+          this.lista_vacia = true;
+        }
       }
     )
   }

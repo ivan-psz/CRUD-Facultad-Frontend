@@ -1,0 +1,38 @@
+<section class="p-materia-screen">
+    <div class="wrapper">
+        <div class="header">
+            <div class="icon-back" (click)="regresar()">
+                <mat-icon class="icon-back">arrow_back</mat-icon>
+            </div>
+            <div class="buttons">
+                <button class="editar" mat-flat-button (click)="editarMateria()">Editar</button>
+                <button class="eliminar" mat-flat-button color="warn" (click)="eliminar(materia.nrc)">Eliminar</button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="nombre">
+                <h1 class="txt-nombre">{{materia.nombre}}</h1>
+                <h2 class="txt-nrc">{{materia.nrc}}</h2>
+            </div>
+            <div class="informacion">
+                <h3 class="txt-info-title">Información de la materia</h3>
+                <div class="body-info">
+                    <p class="tab">&ensp</p><span class="txt-info">Salón: <span class="txt-var">{{materia.salon}}</span></span>
+                </div>
+                <div class="body-info">
+                    <p class="tab">&ensp</p><span class="txt-info">Horario: <span class="txt-var">{{materia.horario}}</span></span>
+                </div>
+                <div class="body-info">
+                    <p class="tab">&ensp</p><span class="txt-info">Día: <span class="txt-var">{{materia.dia}}</span></span>
+                </div>
+                <div class="body-info">
+                    <p *ngIf="!docenteMissing" class="tab">&ensp</p><span *ngIf="!docenteMissing" class="txt-info">Docente: <span *ngIf="!docenteMissing" class="txt-var">{{docente.nombre}} {{docente.ap_paterno}} {{docente.ap_materno}} ({{docente.num_trabajador}})</span></span>
+                    <p *ngIf="docenteMissing" class="tab">&ensp</p><span *ngIf="docenteMissing" class="txt-info">Docente: <i *ngIf="docenteMissing" class="txt-var">{{docente}}</i></span>
+                </div>
+            </div>
+            <div class="alumnos">
+                <h2 class="txt-alumnos">Alumnos tomando esta materia</h2>
+            </div>
+        </div>
+    </div>
+</section>

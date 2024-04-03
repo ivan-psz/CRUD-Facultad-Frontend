@@ -1,0 +1,89 @@
+.wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background-color: #15202B;
+}
+//Estilo para quitar margenes al mat dialog
+::ng-deep .mat-dialog-container {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.body-modal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.title-modal{
+    text-align: center;
+    font-family: Nexa-Bold;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.72px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.descripcion{
+    text-align: center;
+    font-family: Nexa;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
+.buttons-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.btn-regresar{
+    //margin-top: 20px;
+    width: 132px;
+    height: 48px;
+    background: #192734 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 10px #4E071433;
+    border: 1px solid #121C26;
+    opacity: 1;
+    //Fuentes
+    text-align: center;
+    font-family: Nexa-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.btn-eliminar{
+    //margin-top: 20px;
+    width: 132px;
+    height: 48px;
+    background: #E84150 0% 0% no-repeat padding-box;
+    box-shadow: 0px 12px 20px #4E071433;
+    border: 1px solid #E84150;
+    opacity: 1;
+    //Fuentes
+    text-align: center;
+    font-family: Nexa-Bold;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}

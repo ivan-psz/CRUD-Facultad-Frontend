@@ -11,6 +11,7 @@ import { PostDocenteComponent } from './screens/post-docente/post-docente.compon
 import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
 import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-materia-screen.component';
 import { ListMateriasScreenComponent } from './screens/list-materias-screen/list-materias-screen.component';
+import { PMateriaScreenComponent } from './screens/p-materia-screen/p-materia-screen.component';
 
 const routes: Routes = [
   {path: '', component: HomeScreenComponent, pathMatch: 'full'},
@@ -25,7 +26,9 @@ const routes: Routes = [
   {path: 'list-docentes', component: ListDocentesScreenComponent, pathMatch: 'full'},
   {path: 'materias', component: MateriasScreenComponent, pathMatch: 'full'},
   {path: 'post-materia', component: PostMateriaScreenComponent, pathMatch: 'full'},
+  {path: 'post-materia/:nrc', component: PostMateriaScreenComponent, pathMatch: 'full'},
   {path: 'list-materias', component: ListMateriasScreenComponent, pathMatch: 'full'},
+  {path: 'materia/:nrc', component: PMateriaScreenComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

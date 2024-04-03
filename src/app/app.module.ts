@@ -41,6 +41,9 @@ import { DeleteDocenteModalComponent } from './modals/delete-docente-modal/delet
 import { EditarDocenteModalComponent } from './modals/editar-docente-modal/editar-docente-modal.component';
 import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-materia-screen.component';
 import { ListMateriasScreenComponent } from './screens/list-materias-screen/list-materias-screen.component';
+import { PMateriaScreenComponent } from './screens/p-materia-screen/p-materia-screen.component';
+import { EditarMateriaModalComponent } from './modals/editar-materia-modal/editar-materia-modal.component';
+import { EliminarMateriaModalComponent } from './modals/eliminar-materia-modal/eliminar-materia-modal.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,10 @@ import { ListMateriasScreenComponent } from './screens/list-materias-screen/list
     DeleteDocenteModalComponent,
     EditarDocenteModalComponent,
     PostMateriaScreenComponent,
-    ListMateriasScreenComponent
+    ListMateriasScreenComponent,
+    PMateriaScreenComponent,
+    EditarMateriaModalComponent,
+    EliminarMateriaModalComponent
   ],
   imports: [
     BrowserModule,

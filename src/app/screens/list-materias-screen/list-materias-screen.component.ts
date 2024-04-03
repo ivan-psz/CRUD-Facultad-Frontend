@@ -14,6 +14,7 @@ declare var $ :any; //JQuery
 export class ListMateriasScreenComponent implements OnInit {
 
   public lista_materias: any[] = [];
+  public lista_vacia: boolean = false;
 
   constructor(
     private service: MateriasService,
@@ -29,6 +30,9 @@ export class ListMateriasScreenComponent implements OnInit {
       (response)=>{
         this.lista_materias = response;
         console.log("Lista materias: ", this.lista_materias);
+        if(this.lista_materias.length < 1){
+          this.lista_vacia = true;
+        }
       }
     )
   }

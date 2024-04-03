@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { MateriasService } from '../../services/materias.service';
 import { DocentesService } from '../../services/docentes.service';
+import { EditarMateriaModalComponent } from '../../modals/editar-materia-modal/editar-materia-modal.component';
 
 declare var $ :any; //JQuery
 
@@ -42,25 +43,25 @@ export class PostMateriaScreenComponent implements OnInit {
     this.materia = this.service.esquemaMateria();
     this.obtenerDocentes();
 
-    /*if(this.activatedRoute.snapshot.params['nrc'] != undefined){
+    if(this.activatedRoute.snapshot.params['nrc'] != undefined){
       this.editar = true;
       this.nrc = this.activatedRoute.snapshot.params['nrc'];
       console.log("NRC: ", this.nrc);
       this.obtenerMateriaByNRC();
-    }*/
+    }
 
     console.log("Materia: ", this.materia);
   }
 
   public obtenerMateriaByNRC(){
-    /*this.service.obtenerMateriaByNRC(this.nrc).subscribe(
+    this.service.obtenerMateriaByNRC(this.nrc).subscribe(
       (response)=>{
         this.materia = response;
         console.log("Datos de la materia: ", this.materia);
       }, (error)=>{
         alert("Error al obtener la información de la materia");
       }
-    );*/
+    );
   }
 
   public inicializarUsuario() 
@@ -117,7 +118,7 @@ export class PostMateriaScreenComponent implements OnInit {
     }
     console.log("Pasó la validación");
     
-    /*const dialogRef = this.dialog.open(EditarDocenteModalComponent,{
+    const dialogRef = this.dialog.open(EditarMateriaModalComponent,{
       data: this.materia,
       height: '238px',
       width: '328px'
@@ -130,7 +131,7 @@ export class PostMateriaScreenComponent implements OnInit {
       }else{
         console.log("No se editó la materia");
       }
-    })*/
+    })
 
     return true;
   }

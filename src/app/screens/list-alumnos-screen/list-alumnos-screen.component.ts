@@ -12,6 +12,7 @@ declare var $ :any; //JQuery
 
 export class ListAlumnosScreenComponent implements OnInit {
 
+  public lista_vacia: boolean = false;
   public lista_alumnos: any[] = [];
 
   constructor(
@@ -28,6 +29,9 @@ export class ListAlumnosScreenComponent implements OnInit {
       (response)=>{
         this.lista_alumnos = response;
         console.log("Lista alumnos: ", this.lista_alumnos);
+        if(this.lista_alumnos.length < 1){
+          this.lista_vacia = true;
+        }
       }
     )
   }

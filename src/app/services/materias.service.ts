@@ -105,15 +105,15 @@ export class MateriasService {
   }
 
   public obtenerMateriaByNRC(nrc: Number){
-    //return this.http.get<any>(`${environment.url_api}/docentes/?num_trabajador=${nrc}`, httpOptions);
+    return this.http.get<any>(`${environment.url_api}/materias/?nrc=${nrc}`, httpOptions);
   }
 
-  public editarMateria (data: any)/*: Observable <any>*/{
-    //return this.http.put<any>(`${environment.url_api}/docentes-edit/`, data);
+  public editarMateria (data: any): Observable <any>{
+    return this.http.put<any>(`${environment.url_api}/materias-edit/`, data);
   }
 
-  public eliminarMateria(nrc: Number)/*: Observable <any>*/{
-    //return this.http.delete<any>(`${environment.url_api}/docentes-edit/?num_trabajador=${nrc}`);
+  public eliminarMateria(nrc: Number): Observable <any>{
+    return this.http.delete<any>(`${environment.url_api}/materias-edit/?nrc=${nrc}`);
   }
 
 }

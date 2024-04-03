@@ -6,7 +6,7 @@
             </mat-drawer>
             <app-header-app (drawer)="drawer.toggle()"></app-header-app>
             <div class="body-list-materias">
-                <div class="cards" *ngIf="lista_materias.length>0; else lista_vacia">
+                <div class="cards" *ngIf="!lista_vacia">
                     <div class="card-container">
                         <div class="card" *ngFor="let materia of lista_materias" (click)="goMateria(materia.nrc)">
                           <div class="card-header d-flex justify-content-between align-items-center">
@@ -18,11 +18,9 @@
                         </div>
                       </div>
                 </div>
-                <ng-template #lista_vacia>
-                    <div class="body-lista-vacia">
-                        <p class="txt-lista-vacia">Parece ser que no hay materias registradas ):</p>
-                    </div>
-                </ng-template>
+                <div *ngIf="lista_vacia" class="body-lista-vacia">
+                    <p class="txt-lista-vacia">Parece ser que no hay materias registradas ):</p>
+                </div>
             </div>
         </mat-drawer-container>
     </div>
