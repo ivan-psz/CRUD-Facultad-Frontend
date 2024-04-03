@@ -100,8 +100,8 @@ export class MateriasService {
     return this.http.post<any>(`${environment.url_api}/materias/`,data, httpOptions);
   }
   
-  public obtenerListaMaterias()/*: Observable<any>*/{
-    //return this.http.get<any>(`${environment.url_api}/list-docentes/`, httpOptions);
+  public obtenerListaMaterias(): Observable<any>{
+    return this.http.get<any>(`${environment.url_api}/list-materias/`, httpOptions);
   }
 
   public obtenerMateriaByNRC(nrc: Number){

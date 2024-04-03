@@ -1,0 +1,29 @@
+<section class="list-materias-screen">
+    <div class="wrapper">
+        <mat-drawer-container>
+            <mat-drawer #drawer mode='over' position="start">
+                <app-leftside-bar (cerrar)="drawer.toggle()"></app-leftside-bar>
+            </mat-drawer>
+            <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+            <div class="body-list-materias">
+                <div class="cards" *ngIf="lista_materias.length>0; else lista_vacia">
+                    <div class="card-container">
+                        <div class="card" *ngFor="let materia of lista_materias" (click)="goMateria(materia.nrc)">
+                          <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-header">{{ materia.nrc }}</span>
+                          </div>
+                          <div class="card-body">
+                            <span class="text-body">{{ materia.nombre }}</span>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <ng-template #lista_vacia>
+                    <div class="body-lista-vacia">
+                        <p class="txt-lista-vacia">Parece ser que no hay materias registradas ):</p>
+                    </div>
+                </ng-template>
+            </div>
+        </mat-drawer-container>
+    </div>
+</section>

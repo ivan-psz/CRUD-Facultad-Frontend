@@ -92,7 +92,7 @@ export class PostMateriaScreenComponent implements OnInit {
         console.log("Usuario registrado: ", response);
         this.router.navigate(['']);
       }, (error)=>{
-        alert("Hubo un error al registrar la materia");
+        alert("Hubo un error al registrar la materia. Verifique que el NRC o el número de trabajador no se repita.");
         console.log(error);
       }
     );
@@ -148,8 +148,19 @@ export class PostMateriaScreenComponent implements OnInit {
       (response)=>{
         this.docentes = response;
         console.log("Lista docentes: ", this.docentes);
+        if(!this.verificarDocentes()){
+          alert("No hay docentes en el sistema. Dé de alta a al menos uno para poder crear materias.");
+          this.router.navigate(['docentes']);
+        }
       }
     )
+  }
+
+  public verificarDocentes(): boolean{
+    if(this.docentes.length > 0){
+      return true;
+    }
+    return false;
   }
 
   public completar(event: any){
@@ -165,13 +176,5 @@ export class PostMateriaScreenComponent implements OnInit {
     const horasFormato = nuevaHora.toString().padStart(2, '0'); // Ensure two-digit format
     return `${horasFormato}:59`;
   }
-
-  /*public modificar(event: any){
-    const [edificio, salon] = event.split([3]);
-    console.log("Edificio", edificio);
-    console.log("Salón: ", salon);
-
-    this.materia.salon = `${edificio}-${salon}`;
-  }*/
 
 }

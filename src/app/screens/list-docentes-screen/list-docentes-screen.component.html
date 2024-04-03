@@ -8,12 +8,16 @@
             <div class="body-list-docentes">
                 <div class="cards" *ngIf="lista_docentes.length>0; else lista_vacia">
                     <div class="card-container">
-                        <div class="card" *ngFor="let docente of lista_docentes" (click)="goDocente(docente.num_trabajador)">
+                        <div class="card" *ngFor="let docente of lista_docentes">
                           <div class="card-header d-flex justify-content-between align-items-center">
                             <span class="text-header">{{ docente.num_trabajador }}</span>
                           </div>
                           <div class="card-body">
                             <span class="text-body">{{ docente.nombre }} {{ docente.ap_paterno }} {{ docente.ap_materno }}</span>
+                            <div class="botones">
+                                <button mat-button class="btn btn-editar" type="submit" (click)="editarDocente(docente.num_trabajador)">Editar</button>
+                                <button mat-button class="btn-eliminar" type="submit" (click)="eliminarDocente(docente.num_trabajador)" >Eliminar</button>
+                            </div>
                           </div>
                         </div>
                       </div>

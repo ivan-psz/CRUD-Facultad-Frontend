@@ -37,10 +37,10 @@ import { DeleteAlumnoModalComponent } from './modals/delete-alumno-modal/delete-
 import { EditarAlumnoModalComponent } from './modals/editar-alumno-modal/editar-alumno-modal.component';
 import { PostDocenteComponent } from './screens/post-docente/post-docente.component';
 import { ListDocentesScreenComponent } from './screens/list-docentes-screen/list-docentes-screen.component';
-import { PDocenteScreenComponent } from './screens/p-docente-screen/p-docente-screen.component';
 import { DeleteDocenteModalComponent } from './modals/delete-docente-modal/delete-docente-modal.component';
 import { EditarDocenteModalComponent } from './modals/editar-docente-modal/editar-docente-modal.component';
 import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-materia-screen.component';
+import { ListMateriasScreenComponent } from './screens/list-materias-screen/list-materias-screen.component';
 
 @NgModule({
   declarations: [
@@ -58,10 +58,10 @@ import { PostMateriaScreenComponent } from './screens/post-materia-screen/post-m
     EditarAlumnoModalComponent,
     PostDocenteComponent,
     ListDocentesScreenComponent,
-    PDocenteScreenComponent,
     DeleteDocenteModalComponent,
     EditarDocenteModalComponent,
-    PostMateriaScreenComponent
+    PostMateriaScreenComponent,
+    ListMateriasScreenComponent
   ],
   imports: [
     BrowserModule,
